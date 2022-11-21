@@ -7,6 +7,7 @@ import java.util.Set;
 
 public class MemberShipManagementSet {
     Set memberSet = new HashSet();
+    final String line = "==================================";
 
     MemberShipManagementSet() {
     }
@@ -16,9 +17,11 @@ public class MemberShipManagementSet {
     }
 
     void showAllMember() {
+        System.out.println(line);
         for (Object a : memberSet) {
             System.out.println(a);
         }
+        System.out.println(line);
     }
 
     boolean removeMember(int memberId) {
@@ -29,6 +32,7 @@ public class MemberShipManagementSet {
             }
         }
         System.out.printf("%d에 해당하는 멤버가 없습니다.\n",memberId);
+        System.out.println(line);
         return false;
     }
 }
